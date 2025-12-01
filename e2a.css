@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /* 見出し1の文字サイズ */
 h1 {
-  font-size: 32px;
+  font-size: 100px;
 }
 
 /* 見出し2の文字サイズ */
 h2 {
-  font-size: 24px;
+  font-size: 25px;
 }
 
 /* 段落（本文）の文字サイズ */
 p {
-  font-size: 16px;
+  font-size: 5px;
 }
