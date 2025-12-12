@@ -72,27 +72,25 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
+  gap: 20px; /* 左右の間隔 */
 }
 
-.content-box {
-  flex: 1; /* 左側の文章が右側に押しつぶされないようにする */
-}
-
+/* 画像サイズ調整 */
 .img-box img {
   width: 200px;
   height: auto;
   border-radius: 6px;
 }
 
+/* スマホ対応 */
 @media (max-width: 700px) {
   .section-content {
-    flex-direction: column;
+    flex-direction: column; /* 下に並べる */
     text-align: center;
   }
 
   .img-box img {
-    width: 80%;
-    margin: 0 auto 15px;
+    width: 80%; /* 横幅を狭くする */
+    margin: 0 auto 15px; /* 真ん中に寄せる */
   }
 }
