@@ -69,27 +69,6 @@ footer {
 
 
 /* ===== PC版（横に並べる） ===== */
-@media screen and (min-width: 768px) {
-  .content-box {
-    display: flex;
-    gap: 20px;
-  }
-
-  .img-box {
-    display: flex;
-    flex-direction: column; /* 写真2枚を縦につむ */
-    gap: 12px;
-    width: 250px; /* 適度な幅 */
-  }
-
-  .img-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-}
-
-/* ===== スマホ版（縦に並べる） ===== */
 @media screen and (max-width: 767px) {
   .content-box {
     display: block;
