@@ -1,90 +1,74 @@
 /* 全体の基本設定 */
 body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", 
-                 "Hiragino Sans", Meiryo, sans-serif;
-    line-height: 1.7;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f7f4; /* 松戸の自然っぽい淡い緑 */
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+               "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f7f4;
 }
 
-/* ページタイトル（h1） */
+/* ページタイトル */
 h1 {
-    color: #2a8f3a; /* 緑 */
-    font-size: 2.2em;
-    text-align: center;
-    border-bottom: 3px solid #2a8f3a;
-    padding-bottom: 12px;
-    margin-bottom: 30px;
+  color: #2a8f3a;
+  font-size: 2.2em;
+  text-align: center;
+  border-bottom: 3px solid #2a8f3a;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
 }
 
-/* h1の下に置く画像の設定 */
+/* h1下の画像 */
 .title-box img {
-    width: 60%;
-    max-width: 280px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto 30px;  /* ← 最後の数字が“下の余白”。大きくした。 */
+  width: 60%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto 30px;
 }
 
-/* セクションタイトル（h2） */
+/* h2 */
 h2 {
-    color: #2e4a2f;
-    font-size: 1.6em;
-    background-color: #ffffff;
-    padding: 10px 15px;
-    border-left: 6px solid #2a8f3a; /* 緑のライン */
-    margin-top: 40px;
-    margin-bottom: 15px;
-    text-align: left;
-    border-radius: 4px;
+  color: #2e4a2f;
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-/* 本文（p） */
+/* 本文 */
 p {
-    font-size: 1rem;
-    margin-bottom: 18px;
-    line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  line-height: 1.8;
 }
 
 /* セクション全体 */
 section {
-    background-color: #fff;
-    padding: 8px 12px;   /* ← 内側を少し狭くした */
-    margin-bottom: 25px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
 }
 
-/* フッター */
-footer {
-    margin-top: 50px;
-    text-align: center;
-    color: #666;
-    font-size: 0.8em;
-    padding: 10px;
-}
-
-
+/* 横並び用 flex */
 .section-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 20px;
+  align-items: flex-start;
 }
 
+/* 左側文章の幅調整 */
 .content-box {
-  flex: 1; /* 左側の文章が右側に押しつぶされないようにする */
+  flex: 1;
 }
 
+/* 画像 */
 .img-box img {
   width: 200px;
   height: auto;
   border-radius: 6px;
 }
 
+/* スマホ対応 */
 @media (max-width: 700px) {
   .section-content {
     flex-direction: column;
@@ -95,4 +79,13 @@ footer {
     width: 80%;
     margin: 0 auto 15px;
   }
+}
+
+/* フッター */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #666;
+  font-size: 0.8em;
+  padding: 10px;
 }
