@@ -1,4 +1,4 @@
-/* 全体の基本設定 */
+/* 全体設定 */
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
                "Hiragino Sans", Meiryo, sans-serif;
@@ -16,7 +16,7 @@ h1 {
   text-align: center;
   border-bottom: 3px solid #2a8f3a;
   padding-bottom: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* h1下の画像 */
@@ -29,7 +29,7 @@ h1 {
   margin: 20px auto 30px;
 }
 
-/* h2 */
+/* h2（セクションタイトル） */
 h2 {
   color: #2e4a2f;
   font-size: 1.6em;
@@ -40,28 +40,33 @@ h2 {
 /* 本文 */
 p {
   font-size: 1rem;
-  margin-bottom: 18px;
-  line-height: 1.8;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 /* セクション全体 */
 section {
   margin-bottom: 25px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* 横並び用 flex */
+/* セクション内の横並びコンテンツ */
 .section-content {
   display: flex;
   gap: 20px;
   align-items: flex-start;
+  justify-content: center; /* 横方向中央揃え */
 }
 
-/* 左側文章の幅調整 */
+/* 左側文章 */
 .content-box {
   flex: 1;
 }
 
-/* 画像 */
+/* 右側画像 */
 .img-box img {
   width: 200px;
   height: auto;
