@@ -67,40 +67,37 @@ footer {
     padding: 10px;
 }
 
-/* セクション内の配置（PC版） */
-.content-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* 文章エリア */
-.text-box {
-    flex: 1;
+.section-header .img-box {
+  display: flex;
+  gap: 10px;
 }
 
-/* 画像エリア（右側） */
-.img-box {
-    display: flex;
-    flex-direction: column; /* 縦に2つ */
-    gap: 10px;
+.section-header .img-box img {
+  width: 150px;
+  height: auto;
+  border-radius: 6px;
 }
 
-.img-box img {
-    width: 220px;   /* 好きな大きさに調整してね */
-    border-radius: 4px;
-    object-fit: cover;
-}
+@media (max-width: 600px) {
+  .section-header {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .section-header .img-box {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* ▼スマホ版（画面幅 768px 以下） */
-@media (max-width: 768px) {
-    .content-box {
-        flex-direction: column; /* 上下並びになる */
-    }
-
-    .img-box img {
-        width: 100%; /* スマホでは横幅いっぱい */
-    }
+  .section-header .img-box img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
