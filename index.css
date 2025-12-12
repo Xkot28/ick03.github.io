@@ -26,7 +26,7 @@ h1 {
     height: auto;
     border-radius: 10px;
     display: block;
-    margin: 20px auto 0;
+    margin: 20px auto 30px;  /* ← 最後の数字が“下の余白”。大きくした。 */
 }
 
 /* セクションタイトル（h2） */
@@ -52,7 +52,7 @@ p {
 /* セクション全体 */
 section {
     background-color: #fff;
-    padding: 15px 20px;
+    padding: 8px 12px;   /* ← 内側を少し狭くした */
     margin-bottom: 25px;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
