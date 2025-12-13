@@ -72,7 +72,7 @@ section {
 }
 /* 右側画像のサイズ */
 .img-box img {
-  width: 35px;
+  width: 200px;
   height: auto;
   border-radius: 6px;
   margin-left: auto;
