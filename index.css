@@ -1,4 +1,6 @@
-/* 全体設定 (変更なし) */
+/* =========================================
+   全体設定
+   ========================================= */
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
                "Hiragino Sans", Meiryo, sans-serif;
@@ -9,67 +11,95 @@ body {
   background-color: #f5f7f4;
 }
 
-/* ... その他のスタイル（h1, h2, p, section, .title-box img）は変更なし ... */
+h1 {
+  color: #2a8f3a;
+  font-size: 2.2em;
+  text-align: center;
+  border-bottom: 3px solid #2a8f3a;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
 
-/* セクション内のコンテンツ（文章と画像のコンテナ） */
+.title-box img {
+  width: 60%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto 30px;
+}
+
+h2 {
+  color: #2e4a2f;
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* =========================================
+   セクション内 横並び設定 (PC版)
+   ========================================= */
 .section-content {
-  /* ★修正: 文章の下に画像を表示するため、flexを解除 */
-  display: block; 
-  /* 以前の flex 関連のプロパティは不要 */
-  /* gap: 20px; */
-  /* align-items: flex-start; */
-  /* justify-content: center; */
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center; /* 横方向中央揃え */
 }
 
-/* 左側文章（以前の .content-box は、section-contentがblockになったため、特に設定不要） */
+/* 左側文章 */
 .content-box {
-  /* flex: 1; は不要 */
+  flex: 1;
 }
 
-/* 画像コンテナ (★追加/修正: 複数の画像を横に並べるための設定) */
+/* 右側画像エリア */
 .img-box {
   display: flex;
-  justify-content: center; /* 画像を中央揃えにする */
-  gap: 15px; /* 画像間の隙間 */
-  margin-top: 15px; /* 文章との間にマージンを追加 */
-  margin-bottom: 10px; 
+  flex-direction: column; /* 画像を縦に並べる */
+  gap: 12px;              /* 画像間の隙間 */
+  flex-shrink: 0;          /* 縮小させない */
+  width: 220px;            /* 幅を固定 */
 }
 
-/* 右側画像 (★修正: 各画像の幅を均等に設定) */
 .img-box img {
-  width: 45%; /* 2枚の画像が中央に並び、隙間を考慮した幅 */
-  max-width: 250px; /* 画像が大きくなりすぎないように制限 */
+  width: 100%;             /* コンテナ幅に合わせる */
   height: auto;
   border-radius: 6px;
 }
 
-/* スマホ対応 */
+/* =========================================
+   スマホ対応 (700px以下)
+   ========================================= */
 @media (max-width: 700px) {
-  /* .section-content の設定は block のままでOK */
-
-  /* ★修正: スマホでは画像を縦に並べる設定 */
-  .img-box {
-    flex-direction: column;
-    align-items: center; /* 縦並びになった画像を中央揃えにする */
-    gap: 10px;
-    margin: 15px auto 10px; /* 中央揃えのためマージンを調整 */
-  }
-
-  /* ★修正: スマホの縦並びで、各画像が一定の幅になるように調整 */
-  .img-box img {
-    width: 80%; /* スマホ画面で画像を広く使う */
-    max-width: 300px;
-    margin: 0; /* flexアイテムとして中央揃えされるため個別のmarginは不要 */
-  }
-  
-  /* 以前の .content-box の text-align: center; もそのまま残します */
   .section-content {
-    /* flex-direction: column; は display: block; に変更されたので不要 */
+    flex-direction: column; /* 縦並び */
     text-align: center;
+  }
+
+  .img-box {
+    width: 80%;
+    max-width: 300px;
+    margin: 15px auto 0;  /* 中央揃え */
+  }
+
+  .img-box img {
+    width: 100%;
   }
 }
 
-/* フッター (変更なし) */
 footer {
   margin-top: 50px;
   text-align: center;
