@@ -1,79 +1,59 @@
-/* 全体設定 (変更なし) */
-body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-               "Hiragino Sans", Meiryo, sans-serif;
-  line-height: 1.7;
-  color: #333;
-  margin: 0;
-  padding: 20px;
-  background-color: #f5f7f4;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>松戸市を紹介するサイトver1.0</title>
+</head>
 
-/* ... その他のスタイル（h1, h2, p, section, .title-box img）は変更なし ... */
+<body>
+<header class="title-box">
+  <h1>松戸市ってなに？</h1>
+  <img src="https://github.com/user-attachments/assets/32cc2e36-b72d-40b8-abb2-5646ac5b4c2d" alt="松戸市の写真">
+</header>
 
-/* セクション内のコンテンツ（文章と画像のコンテナ） */
-.section-content {
-  /* ★修正: 文章の下に画像を表示するため、flexを解除 */
-  display: block; 
-  /* 以前の flex 関連のプロパティは不要 */
-  /* gap: 20px; */
-  /* align-items: flex-start; */
-  /* justify-content: center; */
-}
+<main>
+<section>
+  <h2>概要</h2>
+  <div class="section-content">
+    <div class="content-box">
+      <p>千葉県の北西部に位置する人口約50万人の市<br>
+        江戸川に面しており、古くから東京と千葉や茨城などをつなぐ交通の要所として栄えています。
+      </p>
+      <p>名産品は二十世紀梨と矢切ねぎで<br>
+        戸定邸や本土寺、さくら通りなどの観光名所もあり、四季折々の風景を楽しめます。
+      </p>
+    </div>
+    <div class="img-box">
+      <img src="https://github.com/user-attachments/assets/aa86c6cd-3a49-4f42-9ac6-ebba4da05091" alt="概要写真1">
+      <img src="https://github.com/user-attachments/assets/d9aacbf5-cc7b-47b6-b940-0d76b303f48f" alt="概要写真2">
+    </div>
+  </div>
+</section>
 
-/* 左側文章（以前の .content-box は、section-contentがblockになったため、特に設定不要） */
-.content-box {
-  /* flex: 1; は不要 */
-}
+<section>
+  <h2>松戸市の歴史</h2>
+  <div class="section-content">
+    <div class="content-box">
+      <p>松戸市は古くは海岸線に面しており、今でも貝塚が多く残っています<br>
+        また、江戸時代は将軍や武士の馬を育てる放牧場が広がっていました。
+      </p>
+      <p>戦後になると常盤平団地や小金原団地などの大規模な団地が建てられ<br>
+        常磐線や新京成(と言う鋼の意志)などの交通の便の良さから、<br>
+        ベットタウンとして現在も栄えています。
+      </p>
+    </div>
+    <div class="img-box">
+      <img src="https://github.com/user-attachments/assets/bf55ceb8-a215-4f67-a442-79c78e741bd7" alt="歴史写真1">
+      <img src="img2.jpg" alt="歴史写真2">
+    </div>
+  </div>
+</section>
+</main>
 
-/* 画像コンテナ (★追加/修正: 複数の画像を横に並べるための設定) */
-.img-box {
-  display: flex;
-  justify-content: center; /* 画像を中央揃えにする */
-  gap: 15px; /* 画像間の隙間 */
-  margin-top: 15px; /* 文章との間にマージンを追加 */
-  margin-bottom: 10px; 
-}
-
-/* 右側画像 (★修正: 各画像の幅を均等に設定) */
-.img-box img {
-  width: 45%; /* 2枚の画像が中央に並び、隙間を考慮した幅 */
-  max-width: 250px; /* 画像が大きくなりすぎないように制限 */
-  height: auto;
-  border-radius: 6px;
-}
-
-/* スマホ対応 */
-@media (max-width: 700px) {
-  /* .section-content の設定は block のままでOK */
-
-  /* ★修正: スマホでは画像を縦に並べる設定 */
-  .img-box {
-    flex-direction: column;
-    align-items: center; /* 縦並びになった画像を中央揃えにする */
-    gap: 10px;
-    margin: 15px auto 10px; /* 中央揃えのためマージンを調整 */
-  }
-
-  /* ★修正: スマホの縦並びで、各画像が一定の幅になるように調整 */
-  .img-box img {
-    width: 80%; /* スマホ画面で画像を広く使う */
-    max-width: 300px;
-    margin: 0; /* flexアイテムとして中央揃えされるため個別のmarginは不要 */
-  }
-  
-  /* 以前の .content-box の text-align: center; もそのまま残します */
-  .section-content {
-    /* flex-direction: column; は display: block; に変更されたので不要 */
-    text-align: center;
-  }
-}
-
-/* フッター (変更なし) */
-footer {
-  margin-top: 50px;
-  text-align: center;
-  color: #666;
-  font-size: 0.8em;
-  padding: 10px;
-}
+<footer>
+  <p><small>&copy; 2025 NANIMITEN<br>ここに掲載されている画像は全てフリーです</small></p>
+</footer>
+</body>
+</html>
