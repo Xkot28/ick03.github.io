@@ -53,36 +53,37 @@ section {
 /* =========================================
    セクション内 横並び設定 (PC版)
    ========================================= */
+/* セクション内の横並びコンテンツ */
 .section-content {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items: stretch; /* ← 高さを揃える */
   justify-content: center; /* 横方向中央揃え */
 }
 
 /* 左側文章 */
 .content-box {
-  flex: 1;
+  flex: 1; /* 文章部分は残りのスペースを使う */
 }
 
-/* 右側画像エリア */
+/* 右側画像 */
 .img-box {
+  flex-shrink: 0; /* 文章に押されて縮まらない */
   display: flex;
   flex-direction: column; /* 画像を縦に並べる */
-  gap: 12px;              /* 画像間の隙間 */
-  flex-shrink: 0;          /* 縮小させない */
-  width: 220px;            /* 幅を固定 */
+  justify-content: space-between; /* 上下に均等に配置 */
+  gap: 10px;
+  max-height: 100%; /* 高さを親に合わせる */
 }
 
+/* 右側画像のサイズ */
 .img-box img {
-  width: 100%;             /* コンテナ幅に合わせる */
+  width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-/* =========================================
-   スマホ対応 (700px以下)
-   ========================================= */
+/* スマホ対応 */
 @media (max-width: 700px) {
   .section-content {
     flex-direction: column; /* 縦並び */
@@ -92,18 +93,12 @@ section {
   .img-box {
     width: 80%;
     max-width: 300px;
-    margin: 15px auto 0;  /* 中央揃え */
+    margin: 15px auto 10px;
+    flex-direction: column;
+    justify-content: flex-start; /* 縦並びなので上に詰める */
   }
 
   .img-box img {
     width: 100%;
   }
-}
-
-footer {
-  margin-top: 50px;
-  text-align: center;
-  color: #666;
-  font-size: 0.8em;
-  padding: 10px;
 }
