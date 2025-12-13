@@ -58,17 +58,30 @@ section {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  justify-content: center; /* 横方向中央揃え */
+  justify-content: center;
 }
 
 /* 左側文章 */
 .content-box {
-  flex: 1;
+  flex: 1; /* 残りのスペースを全て使用 */
+}
+
+/* 右側画像コンテナ (改良: 柔軟性を持たせた幅設定) */
+.img-box {
+  /* 固定幅ではなく、最小200px、全体幅の約30%を確保しつつ、最大でも300pxまで */
+  flex-basis: 30%; /* 理想的な幅の割合 */
+  min-width: 200px; /* 最小幅 */
+  max-width: 300px; /* 最大幅 */
+  flex-shrink: 0; /* 縮小させない */
+  
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; /* 画像間の隙間を少し減らして10pxに調整 */
 }
 
 /* 右側画像 */
 .img-box img {
-  width: 200px;
+  width: 100%; /* 親要素（.img-box）の幅いっぱいに広げる */
   height: auto;
   border-radius: 6px;
 }
@@ -80,10 +93,20 @@ section {
     text-align: center;
   }
 
-  .img-box img {
-    width: 50%;
-    margin: 0 auto 15px;
+  /* .img-box 自体を中央揃えにするための幅とマージンの設定 */
+  .img-box {
+    width: 80%; /* 幅を80%に広げ、画像が見やすくなるように調整 */
+    max-width: 300px; /* スマホでも最大幅を制限 */
+    margin: 0 auto 15px; /* 中央揃えと下部のマージン */
+
+    /* PC版でのflex設定は解除 (flex-basis/min-width/max-widthの指定を無効化) */
+    flex-basis: auto;
+    min-width: auto;
+    max-width: auto;
   }
+
+  /* 画像はコンテナの幅いっぱいに広がるので変更なし */
+  /* .img-box img { width: 100%; } */
 }
 
 /* フッター */
