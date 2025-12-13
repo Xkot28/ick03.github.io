@@ -77,3 +77,26 @@ section {
   border-radius: 6px;
   margin-left: auto;
 }
+
+
+/* フッター */
+footer {
+  text-align: center;       /* 文字を中央揃え */
+  color: #666;              /* 薄めのグレー */
+  font-size: 0.8em;         /* 少し小さめ */
+  padding: 20px 10px;       /* 上下の余白を広く、左右は少し */
+  margin-top: 50px;         /* 本文との間隔 */
+  border-top: 1px solid #ddd; /* 上線で区切りを追加 */
+  line-height: 1.5;         /* 行間を少し広げて読みやすく */
+}
+
+/* フッター内のリンクや強調文字の調整 */
+footer a {
+  color: #2a8f3a;           /* 緑系でアクセント */
+  text-decoration: none;    /* 下線を消す */
+  margin: 0 5px;            /* リンク同士の間隔 */
+}
+
+footer a:hover {
+  text-decoration: underline; /* ホバーで下線 */
+}
