@@ -38,7 +38,10 @@ summary::-webkit-details-marker {
   color: #333;
   font-weight: bold;
 }
-
+.menu a:link,
+.menu a:visited {
+  color: #333;
+}
 .menu a:hover {
   opacity: 0.7;
 }
