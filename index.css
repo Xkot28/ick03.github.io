@@ -1,102 +1,56 @@
+/* 全体 */
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-               "Hiragino Sans", Meiryo, sans-serif;
-  line-height: 1.7;
-  color: #333;
   margin: 0;
-  padding: 20px;
-  background-color: #f5f7f4;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.7;
 }
 
-h1 {
-  color: #2a8f3a;
-  font-size: 2.2em;
-  text-align: center;
-  border-bottom: 3px solid #2a8f3a;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
+/* ヘッダー */
+.title-box {
+  padding: 15px;
 }
 
-.title-box img {
-  width: 60%;
-  max-width: 280px;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 20px auto 30px;
+/* 出し引きメニュー */
+.menu-box {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-h2 {
-  color: #2e4a2f;
-  font-size: 1.6em;
-  margin-top: 0;
-  margin-bottom: 15px;
+summary {
+  cursor: pointer;
+  font-size: 24px;
+  list-style: none;
 }
 
-p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  line-height: 1.6;
+summary::-webkit-details-marker {
+  display: none;
 }
 
-section {
-  margin-bottom: 25px;
-  padding: 20px;
-  border-radius: 6px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-
-
-.section-content {
-  display: flex;
+/* メニュー中身 */
+.menu {
+  display: inline-flex;
   gap: 20px;
-  align-items: stretch; /* ← 高さを揃える */
-  justify-content: center; /* 横方向中央揃え */
+  margin-left: 10px;
 }
 
-.section-content {
-  display: flex;
-  align-items: stretch; /* 左右の高さを揃える */
-  gap: 20px;            /* 左右の間隔 */
-  justify-content: space-between; /* 左右を端に寄せる */
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-.img-box {
-  display: flex;
-  flex-direction: column; /* 画像は縦並び */
-  gap: 10px;
-  /* 右寄せのためにflex-shrinkを無効化 */
-  flex-shrink: 0;
-}
-/* 右側画像のサイズ */
-.img-box img {
-  width: 200px;
-  height: auto;
-  border-radius: 6px;
-  margin-left: auto;
+.menu a:hover {
+  opacity: 0.7;
 }
 
+/* セクション */
+section {
+  padding: 20px;
+}
 
 /* フッター */
 footer {
-  text-align: center;       /* 文字を中央揃え */
-  color: #666;              /* 薄めのグレー */
-  font-size: 0.8em;         /* 少し小さめ */
-  padding: 20px 10px;       /* 上下の余白を広く、左右は少し */
-  margin-top: 50px;         /* 本文との間隔 */
-  border-top: 1px solid #ddd; /* 上線で区切りを追加 */
-  line-height: 1.5;         /* 行間を少し広げて読みやすく */
-}
-
-/* フッター内のリンクや強調文字の調整 */
-footer a {
-  color: #2a8f3a;           /* 緑系でアクセント */
-  text-decoration: none;    /* 下線を消す */
-  margin: 0 5px;            /* リンク同士の間隔 */
-}
-
-footer a:hover {
-  text-decoration: underline; /* ホバーで下線 */
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
 }
