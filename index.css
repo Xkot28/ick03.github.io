@@ -50,17 +50,22 @@ img {
    ヘッダー
    ========================================= */
 .title-box {
-  background: #0072ff; /* 単色で落ち着かせる */
-  color: #fff;
+  /* 緑から下に向かって透明 */
+  background: linear-gradient(to bottom, #00a651 0%, rgba(0,166,81,0) 100%);
+  
   width: 100%;
-  padding: 30px 0;
+  padding: 60px 0; /* 高さはタイトルが目立つくらい */
   text-align: center;
+  color: #fff; /* 文字は白 */
+  position: relative; /* タイトルを上に置くため */
 }
 
+/* タイトル */
 .title-box h1 {
   margin: 0;
   font-size: 2rem;
-  letter-spacing: 0.03em;
+  position: relative; /* 背景に被らないように */
+  z-index: 1;
 }
 
 /* =========================================
