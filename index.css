@@ -30,8 +30,10 @@ img {
 /* ヘッダー */
 .title-box {
   background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  background-size: 100% 25%;  /* 横100%・縦25% */
+  background-repeat: no-repeat;
   width: 100%;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 /* 出し引きメニュー */
