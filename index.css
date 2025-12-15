@@ -84,7 +84,7 @@ summary {
   padding: 5px 10px;
   background: transparent;
   border-radius: 20px;
-  color: var(--accent-color);
+  color: #000; /* ここを黒に変更 */
 }
 
 summary::-webkit-details-marker {
